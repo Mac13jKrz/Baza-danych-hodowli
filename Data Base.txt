@@ -1,0 +1,36 @@
+Drop table HODOWLA cascade constraints;
+Drop table BYKI cascade constraints;
+Drop table JALOWKI cascade constraints;
+
+Create table HODOWLA
+(
+	numer ID(14) primary key,
+	data paszportu(8) not null,
+	data urodzenia(8),
+	plec(2),
+	rasa(9),
+	numer ID matki(14)
+);
+
+Create table BYKI
+(
+	numer ID(14) primary key,
+	data urodzenia(8),
+	numer ID matki(14)
+);
+
+Create table JALOWKI
+(
+	numer ID(14) primary key,
+	data urodzenia(8),
+	numer ID matki(14)
+);
+Drop sequence seq_hodowla_nr;
+Drop sequence seq_byki_nr;
+Drop sequence seq_jalowki_nr;
+create sequence seq_hodowla_nr;
+create sequence seq_byki_nr;
+create sequence seq_jalowki_nr;
+create or replace trigger tgr_hodowla_nr
+before insert on HODOWLA
+for each now
