@@ -6,6 +6,7 @@ Create table HODOWLA
 (
 	numer ID(14) primary key,
 	data paszportu(8) not null,
+	kolczyk ID(5),
 	data urodzenia(8),
 	plec(2),
 	rasa(9),
@@ -15,6 +16,7 @@ Create table HODOWLA
 Create table BYKI
 (
 	numer ID(14) primary key,
+	kolczyk ID(5),
 	data urodzenia(8),
 	numer ID matki(14)
 );
@@ -22,6 +24,7 @@ Create table BYKI
 Create table JALOWKI
 (
 	numer ID(14) primary key,
+	kolczyk(5),
 	data urodzenia(8),
 	numer ID matki(14)
 );
@@ -34,3 +37,31 @@ create sequence seq_jalowki_nr;
 create or replace trigger tgr_hodowla_nr
 before insert on HODOWLA
 for each now
+begin
+IF :new.NR IS NULL THEN
+		SELECT seq_hodowla_nr.nextval
+    INTO :new.NR FROM DUAL;
+	END IF;
+END;
+/
+create or replace TRIGGER TGR_STANOWISKO_NR 
+BEFORE INSERT ON STANOWISKO 
+FOR EACH ROW
+BEGIN
+  IF :new.NR IS NULL THEN
+		SELECT seq_byki_nr.nextval
+    INTO :new.NR FROM DUAL;
+	END IF;
+END;
+/
+create or replace TRIGGER TGR_DZIAL_NR 
+BEFORE INSERT ON DZIAL 
+FOR EACH ROW
+BEGIN
+  IF :new.NR IS NULL THEN
+		SELECT seq_jalowki_nr.nextval
+    INTO :new.NR FROM DUAL;
+	END IF;
+END;
+/
+COMMIT;
