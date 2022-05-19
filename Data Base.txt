@@ -1,36 +1,40 @@
-Drop table HODOWLA cascade constraints;
-Drop table BYKI cascade constraints;
-Drop table JALOWKI cascade constraints;
-
+create database Baza_hodowli;
+use Baza_hodowli;
 Create table HODOWLA
 (
-	numer ID(14) primary key,
-	data paszportu(8) not null,
-	kolczyk ID(5),
-	data urodzenia(8),
-	plec(2),
-	rasa(9),
-	numer ID matki(14),
-	kolczyk ID matki(5)
+	numer_ID varchar (14) primary key,
+	data_paszportu varchar (8) not null,
+	kolczyk_ID varchar (5),
+	data_urodzenia varchar (8),
+	plec varchar (2),
+	rasa varchar (9),
+	numer_ID_matki Varchar (14),
+	kolczyk_ID_matki varchar (5)
 );
+select * from HODOWLA;
 
 Create table BYKI
 (
-	numer ID(14) primary key,
-	kolczyk ID(5),
-	data urodzenia(8),
-	numer ID matki(14),
-	kolczyk ID matki(5)
+ numer_ID varchar (14) primary key,
+	kolczyk varchar (5),
+	data_urodzenia varchar (8),
+	numer_ID_matki varchar (14),
+	kolczyk_ID_matki varchar (5)
 );
+
+select * from BYKI;
 
 Create table JALOWKI
 (
-	numer ID(14) primary key,
-	kolczyk(5),
-	data urodzenia(8),
-	numer ID matki(14),
-	kolczyk ID matki(5)
+	 numer_ID varchar (14) primary key,
+	kolczyk varchar (5),
+	data_urodzenia varchar (8),
+	numer_ID_matki varchar (14),
+	kolczyk_ID_matki varchar (5)
 );
+
+select * from JALOWKI;
+
 Drop sequence seq_hodowla_nr;
 Drop sequence seq_byki_nr;
 Drop sequence seq_jalowki_nr;
@@ -69,62 +73,46 @@ END;
 /
 COMMIT;
 
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
-insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
+insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
 commit;
