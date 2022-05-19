@@ -127,3 +127,4 @@ insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, 
 insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
 insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
 insert into hodowla (numerID, data paszportu, kolczyk ID, data urodzenia, plec, rasa, numer ID matki, kolczyk ID matki) values ();
+commit;
