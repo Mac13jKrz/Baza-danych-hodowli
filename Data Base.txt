@@ -21,7 +21,6 @@ Create table BYKI
 	numer_ID_matki varchar (14),
 	kolczyk_ID_matki varchar (5)
 );
-
 select * from BYKI;
 
 Create table JALOWKI
@@ -32,7 +31,6 @@ Create table JALOWKI
 	numer_ID_matki varchar (14),
 	kolczyk_ID_matki varchar (5)
 );
-
 select * from JALOWKI;
 
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
