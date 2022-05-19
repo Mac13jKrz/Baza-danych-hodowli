@@ -13,34 +13,6 @@ Create table HODOWLA
 );
 select * from HODOWLA;
 
-Create table BYKI
-(
- numer_ID varchar (14) primary key,
-	kolczyk varchar (5),
-	data_urodzenia varchar (8),
-	numer_ID_matki varchar (14),
-	kolczyk_ID_matki varchar (5)
-
-	numer ID(14) primary key,
-	kolczyk ID(5),
-	data urodzenia(8),
-	numer ID matki(14),
-	kolczyk ID matki(5)
-
-);
-select * from BYKI;
-
-Create table JALOWKI
-(
-
-	 numer_ID varchar (14) primary key,
-	kolczyk varchar (5),
-	data_urodzenia varchar (8),
-	numer_ID_matki varchar (14),
-	kolczyk_ID_matki varchar (5)
-);
-select * from JALOWKI;
-
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values ();
