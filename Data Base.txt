@@ -2,97 +2,97 @@ create database Baza_hodowli;
 use Baza_hodowli;
 Create table HODOWLA
 (
-	numer_ID varchar (14) primary key,
-	data_paszportu varchar (8) not null,
-	kolczyk_ID varchar (5),
-	data_urodzenia varchar (8),
-	plec varchar (2),
-	rasa varchar (9),
-	numer_ID_matki Varchar (14),
-	kolczyk_ID_matki varchar (5)
+	numer_ID varchar (16) primary key,
+	data_paszportu varchar (10) not null,
+	kolczyk_ID int ,
+	data_urodzenia varchar (10),
+	plec varchar (4),
+	rasa varchar (30),
+	numer_ID_matki Varchar (16),
+	kolczyk_ID_matki int 
 );
 select * from HODOWLA;
 
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005391165444, 2018-09-19, 65444, 2018-90-17, XY, limousine, PL005401283519, 83519);
+"PL005391165444", "2018-09-19", 65444, "2018-09-17", "XY", "limousine", "PL005401283519", 83519);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005292484200, 2012-02-23, 84200, 2012-02-17, XX, limousine, PL005145047668, 47668);
+"PL005292484200", "2012-02-23", 84200, "2012-02-17", "XX", "limousine", "PL005145047668", 47668);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005296911115, 2013-03-05, 11115, 2013-02-26, XX, limousine, PL005292484101, 84101);
+"PL005296911115", "2013-03-05", 11115, "2013-02-26", "XX", "limousine", "PL005292484101", 84101);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005296911269, 2015-04-27, 11269, 2015-04-22, XX, limousine, PL005292484149, 84149);
+"PL005296911269", "2015-04-27", 11269, "2015-04-22", "XX", "limousine", "PL005292484149", 84149);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005335287942, 2015-09-09, 87942, 2015-09-03, XX, limousine, PL005292484200, 84200);
+"PL005335287942", "2015-09-09", 87942, "2015-09-03", "XX", "limousine", "PL005292484200", 84200);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005335288017, 2016-07-18, 88017, 2016-07-10, XX, limousine, PL005296911115, 91115);
+"PL005335288017", "2016-07-18", 88017, "2016-07-10", "XX", "limousine", "PL005296911115", 91115);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005335288048, 2016-08-17, 88048, 2016-08-10, XX, limousine, PL005292484095, 84095);
+"PL005335288048", "2016-08-17", 88048, "2016-08-10", "XX", "limousine", "PL005292484095", 84095);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357454926, 2019-03-26, 54926, 2019-03-23, XX, limousine, PL005335288017, 88017);
+"PL005357454926", "2019-03-26", 54926, "2019-03-23", "XX", "limousine", "PL005335288017", 88017);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357454933, 2019-03-26, 54933, 2019-03-25, XX, limousine, PL005335288048, 88048);
+"PL005357454933", "2019-03-26", 54933, "2019-03-25", "XX", "limousine", "PL005335288048", 88048);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357454957, 2019-09-09, 54957, 2019-05-17, XX, limousine, PL005335287942, 87942);
+"PL005357454957", "2019-09-09", 54957, "2019-05-17", "XX", "limousine", "PL005335287942", 87942);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357454964, 2019-06-26, 54964, 2019-06-21, XX, limousine, PL005296911269, 11269);
+"PL005357454964", "2019-06-26", 54964, "2019-06-21", "XX", "limousine", "PL005296911269", 11269);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357455015, 2020-02-02, 55015, 2020-01-27, XX, limousine, PL005403342078, 42078);
+"PL005357455015", "2020-02-02", 55015, "2020-01-27", "XX", "limousine", "PL005403342078", 42078);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005357455022, 2020-02-02, 55022, 2020-01-31, XX, limousine, PL005292484149, 84149);
+"PL005357455022", "2020-02-02", 55022, "2020-01-31", "XX", "limousine", "PL005292484149", 84149);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005403342054, 2017-03-23, 42054, 2017-03-20, XX, limousine, PL005292484248, 84248);
+"PL005403342054", "2017-03-23", 42054, "2017-03-20", "XX", "limousine", "PL005292484248", 84248);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005403342078, 2017-05-15, 42078, 2017-05-13, XX, limousine, PL005292484149, 84149);
+"PL005403342078", "2017-05-15", 42078, "2017-05-13", "XX", "limousine", "PL005292484149", 84149);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005403342177, 2018-04-10, 42177, 2018-04-02, XX, limousine, PL005296911108, 11108);
+"PL005403342177", "2018-04-10", 42177, "2018-04-02", "XX", "limousine", "PL005296911108", 11108);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005403342184, 2018-05-08, 42184, 2018-05-04, XX, limousine, PL005292484149, 84149);
+"PL005403342184", "2018-05-08", 42184, "2018-05-04", "XX", "limousine", "PL005292484149", 84149);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460370977, 2021-12-08, 70977, 2021-12,07, XY, limousine, PL005335288048, 88048);
+"PL005460370977", "2021-12-08", 70977, "2021-12-07", "XY", "limousine", "PL005335288048", 88048);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460370984, 2021-12-14, 70984, 2021-12-11, XX, limousine, PL005357454933, 54933);
+"PL005460370984", "2021-12-14", 70984, "2021-12-11", "XX", "limousine", "PL005357454933", 54933);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785552, 2021-01-09, 87552, 2021-01-04, XY, limousine, PL005335288017, 88017);
+"PL005498785552", "2021-01-09", 87552, "2021-01-04", "XY", "limousine", "PL005335288017", 88017);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785569, 2021-01-09, 85569, 2021-01-04, XY, limousine, PL005335287911, 87911);
+"PL005498785569", "2021-01-09", 85569, "2021-01-04", "XY", "limousine", "PL005335287911", 87911);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785576, 2021-01-09, 85576, 2021-01-04, XY, limousine, PL005292484149, 84149);
+"PL005498785576", "2021-01-09", 85576, "2021-01-04", "XY", "limousine", "PL005292484149", 84149);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785583, 2021-01-09, 85583, 2021-01-05, XY, limousine, PL005335288048, 88048);
+"PL005498785583", "2021-01-09", 85583, "2021-01-05", "XY", "limousine", "PL005335288048", 88048);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785590, 2021-01-09, 85590, 2021-01-05, XX, limousine, PL005296911115, 11115);
+"PL005498785590", "2021-01-09", 85590, "2021-01-05", "XX", "limousine", "PL005296911115", 11115);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785606, 2021-01-09, 85606, 2021-01-08, XY, limousine, PL005403342054, 42054);
+"PL005498785606", "2021-01-09", 85606, "2021-01-08", "XY", "limousine", "PL005403342054", 42054);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-Pl005498785613, 2021-01-09, 85613, 2021-01-08, XY, limousine, PL005403342177, 42177);
+"PL005498785613", "2021-01-09", 85613, "2021-01-08", "XY", "limousine", "PL005403342177", 42177);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785620, 2021-01-09, 85620, 2021-01-08, XX, limousine, PL005403342184, 42184);
+"PL005498785620", "2021-01-09", 85620, "2021-01-08", "XX", "limousine", "PL005403342184", 42184);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785637, 2021-02-01, 85637, 2021-01-27, XX, limousine, PL005335287942, 87942);
+"PL005498785637", "2021-02-01", 85637, "2021-01-27", "XX", "limousine", "PL005335287942", 87942);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785644, 2021-02-01, 85644, 2021-01-29, XX, limousine, PL005403342078, 42078);
+"PL005498785644", "2021-02-01", 85644, "2021-01-29", "XX", "limousine", "PL005403342078", 42078);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785651, 2021-05-03, 85651, 2021-04,27, XY, limousine, PL005296911269, 11269);
+"PL005498785651", "2021-05-03", 85651, "2021-04-27", "XY", "limousine", "PL005296911269", 11269);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785668, 2021-07,20, 85668, 2021-07-14, XY, limousine, PL005292484200, 84200);
+"PL005498785668", "2021-07-20", 85668, "2021-07-14", "XY", "limousine", "PL005292484200", 84200);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785675, 2021-12-08, 85675, 2021-12-03, XX. limousine, PL005335288017, 88017);
+"PL005498785675", "2021-12-08", 85675, "2021-12-03", "XX", "limousine", "PL005335288017", 88017);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785682, 2021-12,08, 85682, 2021-12,03, XX, limousine, PL005335287942, 87942);
+"PL005498785682", "2021-12-08", 85682, "2021-12-03", "XX", "limousine", "PL005335287942", 87942);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785699, 2021-12-08, 85699, 2021-12,05, XY, limousine, PL005403342184, 42184);
+"PL005498785699", "2021-12-08", 85699, "2021-12-05", "XY", "limousine", "PL005403342184", 42184);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785705, 2021-12,08, 85705, 2021-12,05, XX, limousine, PL005296911115, 11115);
+"PL005498785705", "2021-12-08", 85705, "2021-12-05", "XX", "limousine", "PL005296911115", 11115);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005498785712, 2021-12-08, 85712, 2021-12-06, XY, limousine, PL005403342078, 42078);
+"PL005498785712", "2021-12-08", 85712, "2021-12-06", "XY", "limousine", "PL005403342078", 42078);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460370991, 2022-01-24, 70991, 2022-01,19, XY, limousine, PL005357454957, 54957);
+"PL005460370991", "2022-01-24", 70991, "2022-01-19", "XY", "limousine", "PL005357454957", 54957);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460371004, 2022-01-24, 71004, 2022-01-20, XY, limousine, PL005357454926, 54926);
+"PL005460371004", "2022-01-24", 71004, "2022-01-20", "XY", "limousine", "PL005357454926", 54926);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460371011, 2022-02-14, 71011, 2022-02-09, XY, limousine, PL005296911269, 11269);
+"PL005460371011", "2022-02-14", 71011, "2022-02-09", "XY", "limousine", "PL005296911269", 11269);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460371028, 2022-02-14, 71028, 2022-02-12, XX, limousine, PL005357454964, 54964);
+"PL005460371028", "2022-02-14", 71028, "2022-02-12", "XX", "limousine", "PL005357454964", 54964);
 insert into hodowla (numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki) values (
-PL005460371035, 2022-05-03, 71035, 2022-04-28, XX, limousine, PL005403342177, 42177);
+"PL005460371035", "2022-05-03", 71035, "2022-04-28", "XX", "limousine", "PL005403342177", 42177);
 commit;
