@@ -1,15 +1,10 @@
-<%@page session="false"%>
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Strona Główna</title>
+<title>strona główna</title>
+ <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<form method="post" action="/login">
-		<input type="text" name="login" placeholder="login"></input>
-		<input type="password" name="password" placeholder="password"></input>
-		<input type="submit" value="Zaloguj się">
-	</form>
 </body>
 </html>
