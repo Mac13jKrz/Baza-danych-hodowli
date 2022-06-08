@@ -25,6 +25,7 @@ import org.springframework.ui.Model;
 import java.util.List;
 import java.util.Map;
 import java.io.*;
+import java.sql.Date;
 import java.util.ArrayList;
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -47,37 +48,87 @@ public class content {
 	}
 	@GetMapping("/")
 	@ResponseBody
-	public ModelAndView index(){
-		return new ModelAndView("main");
+	public RedirectView index(HttpServletRequest request){
+
+		request.getSession().setAttribute("user", "null");
+		return new RedirectView("index.html");
 	}
+
 	@GetMapping("/main")
 	@ResponseBody
-	public ModelAndView main(){
-		return new ModelAndView("main");
+	public ModelAndView mojekruwy(HttpServletRequest request){
+		if("null".equals(request.getSession().getAttribute("user")) || request.getSession().getAttribute("user")==null)
+			return new ModelAndView("forward: ./index.html");
+		request.getSession().setAttribute("kruwy", hodowle.findAll());
+		return new ModelAndView("krowy");
 	}
-    @RequestMapping("/login")
+	@GetMapping("/register")
+	@ResponseBody
+	public ModelAndView main(HttpServletRequest request){
+	if("null".equals(request.getSession().getAttribute("user")) || request.getSession().getAttribute("user")==null)
+		return new ModelAndView("main");
+		return mojekruwy(request);
+	}
+	@RequestMapping("/login")
     @ResponseBody
-    public RedirectView logon(@RequestParam("password") String haslo,@RequestParam("username") String login) {
+    public RedirectView logon(@RequestParam("password") String haslo,@RequestParam("username") String login,HttpServletRequest request) {
     	String password;
     		uzytkownik=uzyt.findByLogin(login);
     		password=uzytkownik.getHaslo();
     		System.out.println(login+" "+uzytkownik.getHaslo());
     		if(password.equals(haslo)) {
     			LogError = false;
-    			AUser = uzytkownik;
+    			request.getSession().setAttribute("user", login);
     			return new RedirectView("/main");
     			
     		}
     		else {
     			LogError = true;
-
+    			request.getSession().setAttribute("user", "null");
     			return new RedirectView("/");
     			
     		}
 
     }
+	@GetMapping("/logout")
+	public RedirectView logout(HttpServletRequest request) {
+		request.getSession().setAttribute("user", "null");
+		return new RedirectView("./");
+	}
+	@RequestMapping("/dodajKrowe")
+    @ResponseBody
+    public RedirectView dodajK(@RequestParam("numer_ID") String numer_ID,
+    		@RequestParam("data_paszportu") Date data_paszportu,
+    		@RequestParam("kolczyk_ID") int kolczyk_ID,
+    		@RequestParam("data_urodzenia") Date data_urodzenia,
+    		@RequestParam("plec") String plec,
+    		@RequestParam("rasa") String rasa,
+    		@RequestParam("numer_ID_matki") String numer_ID_matki,
+    		@RequestParam("kolczyk_ID_matki") int kolczyk_ID_matki) {
+	    	this.hodowle.insertHodowla(numer_ID, data_paszportu, kolczyk_ID, data_urodzenia, plec, rasa, numer_ID_matki, kolczyk_ID_matki);
+		return new RedirectView("/main");
+    }
+	@RequestMapping("/usunKrowe/{numer_ID}")
+    @ResponseBody
+    public RedirectView usunK(@PathVariable("numer_ID") String numer_ID) {
+	    	this.hodowle.deleteHodowla(numer_ID);
+		return new RedirectView("/main");
+    }
+	@RequestMapping("/register/confirm")
+    @ResponseBody
+    public RedirectView registration(@RequestParam("login") String login,@RequestParam("haslo1") 
+    String password,@RequestParam("haslo2") String password2) {
+		if(this.uzyt.findByLogin(login)==null)
+    		if(password.equals(password2)) {
+    			uzyt.insertUser(login, password);
+    			return new RedirectView("/main");
+    		}
+		return new RedirectView("/register");
+
+    }
     @ModelAttribute 
     public void setError(Model model) {
     	model.addAttribute("loginerror",LogError);
+    	model.addAttribute("user","null");
     }
 }

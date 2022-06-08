@@ -70,4 +70,15 @@ public class hodowla {
 	public void setKolczyk_ID_matki(int kolczyk_ID_matki) {
 		this.kolczyk_ID_matki = kolczyk_ID_matki;
 	}
+	public String toString() {
+		return	"<td>"+this.numer_ID+"</td>"
+				+ "</td><td>"+this.data_paszportu+""
+				+ "</td><td>"+this.kolczyk_ID+""
+				+ "</td><td>"+this.data_urodzenia+""
+				+ "</td><td>"+this.plec+""
+				+ "</td><td>"+this.rasa+""
+				+ "</td><td>"+this.numer_ID_matki+""
+				+"<td>"+this.kolczyk_ID_matki+"</td>"
+				+"<td><button onclick=\"document.location.replace('./usunKrowe/"+this.numer_ID+"')\">Usuń</button></td>";
+	}
 }
